@@ -41,19 +41,60 @@
     self.ratingView.progress = [voteAvg doubleValue]/10;
     
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
-    
     NSString *miniPosterURLString = self.detailDic[@"poster_path"];
-    NSString *bigPosterURLString = self.detailDic[@"backdrop_path"];
     NSString *fullMiniPosterURLString = [baseURLString stringByAppendingString:miniPosterURLString];
-    NSString *fullBigPosterURlString = [baseURLString stringByAppendingString:bigPosterURLString];
-    
     NSURL *miniPosterURl = [NSURL URLWithString:fullMiniPosterURLString];
-    NSURL *bigPosterURl = [NSURL URLWithString:fullBigPosterURlString];
-    
     self.miniPoster.image = nil;
     [self.miniPoster setImageWithURL:miniPosterURl];
+    
+    NSURL *urlSmall = [NSURL URLWithString:[@"https://image.tmdb.org/t/p/w45" stringByAppendingString:self.detailDic[@"backdrop_path"]]];
+    NSURL *urlLarge = [NSURL URLWithString:[@"https://image.tmdb.org/t/p/original" stringByAppendingString:self.detailDic[@"backdrop_path"]]];
+    
+    NSURLRequest *requestSmall = [NSURLRequest requestWithURL:urlSmall];
+    NSURLRequest *requestLarge = [NSURLRequest requestWithURL:urlLarge];
+    
+    DetailsViewController *weakSelf = self;
     self.widePoster.image = nil;
-    [self.widePoster setImageWithURL:bigPosterURl];
+    
+    [self.widePoster setImageWithURLRequest:requestSmall
+                          placeholderImage:nil
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *smallImage) {
+                                       
+                                       // smallImageResponse will be nil if the smallImage is already available
+                                       // in cache (might want to do something smarter in that case).
+                                       weakSelf.widePoster.alpha = 0.0;
+                                       weakSelf.widePoster.image = smallImage;
+                                       
+                                       [UIView animateWithDuration:0.3
+                                                        animations:^{
+                                                            
+                                                            weakSelf.widePoster.alpha = 1.0;
+                                                            
+                                                        } completion:^(BOOL finished) {
+                                                            // The AFNetworking ImageView Category only allows one request to be sent at a time
+                                                            // per ImageView. This code must be in the completion block.
+                                                            [weakSelf.widePoster setImageWithURLRequest:requestLarge
+                                                                                  placeholderImage:smallImage
+                                                                                           success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage * largeImage) {
+                                                                                                weakSelf.widePoster.image = largeImage;
+                                                                                  }
+                                                                                           failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                                                                               // do something for the failure condition of the large image request
+                                                                                               // possibly setting the ImageView's image to a default image
+                                                                                           }];
+                                                        }];
+                                   }
+                                   failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                       // do something for the failure condition
+                                       // possibly try to get the large image
+                                        weakSelf.widePoster.alpha = 0.0;
+                                        weakSelf.widePoster.image = [UIImage imageNamed:@"LuffySad"];
+                                        
+                                        //Animate UIImageView back to alpha 1 over 0.3sec
+                                        [UIView animateWithDuration:0.3 animations:^{
+                                            weakSelf.widePoster.alpha = 1.0;
+                                        }];
+                                   }];
     
     [self fetchVids];
 }
