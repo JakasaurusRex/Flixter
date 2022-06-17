@@ -26,11 +26,11 @@ The following **optional** features are implemented:
 - [ X ] Customize the selection effect of the cell.
 - [ X ] Customize the navigation bar.
 - [ X ] Customize the UI.
-- [ ] Run your app on a real device (I do not have a Meta iOS Device).
+- [ X ] Run your app on a real device.
 
 The following **additional** features are implemented:
 
-- [ X ] User can get a random movie selected in a fun way and click on the poster to find out more information.
+- [ X ] User can get a random movie to watch in a fun way and click on the poster to find out more information about it.
 - [ X ] User can watch latest trailer or teaser in details page.
 - [ X ] User can see ratings and movie release date.
 
