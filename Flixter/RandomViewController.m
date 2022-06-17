@@ -9,6 +9,7 @@
 #import "UIImageView+AFNetworking.h"
 #include <stdlib.h>
 #include <time.h>
+#import "DetailsViewController.h"
 
 
 @interface RandomViewController ()
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *randomTitle;
 @property (weak, nonatomic) IBOutlet UIButton *randomButton;
 @property (nonatomic, strong) NSArray *movies;
+@property int r;
 @end
 
 @implementation RandomViewController
@@ -60,9 +62,11 @@
     [task resume];
 }
 
+//when button is pressed
 - (IBAction)onTouch {
     double x = 0;
     while(x<2) {
+        //call the function updateLabel after a time delay which is dependent upon the value of x which is incremented linearly
         [self performSelector:@selector(updateLabel) withObject:nil afterDelay:x];
         [self updateLabel];
         x+=0.2;
@@ -70,12 +74,12 @@
 }
 
 
-
+//updates the picture and label with a random movie
 - (void) updateLabel {
 NSLog(@"Random");
     srand(time(NULL));
-    int r = rand() % self.movies.count;
-    NSDictionary *movie = self.movies[r];
+    self.r = rand() % self.movies.count;
+    NSDictionary *movie = self.movies[self.r];
     self.randomTitle.text = movie[@"title"];
     
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
@@ -87,14 +91,17 @@ NSLog(@"Random");
     
     [self.randomPoster setImageWithURL:posterURl];
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSDictionary *dataToPass = self.movies[self.r];
+    DetailsViewController *detailVC = [segue destinationViewController];
+    detailVC.detailDic = dataToPass;
 }
-*/
+
 
 @end

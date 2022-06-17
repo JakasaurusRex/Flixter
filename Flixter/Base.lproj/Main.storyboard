@@ -270,6 +270,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-lb-gUJ">
+                                <rect key="frame" x="81" y="291" width="256" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="f2u-ov-Vma" kind="show" id="OcU-9r-4at"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dbE-M5-ES6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -305,7 +314,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aET-A1-QKa"/>
+        <segue reference="OcU-9r-4at"/>
         <segue reference="W1k-Q3-8MG"/>
     </inferredMetricsTieBreakers>
     <resources>
