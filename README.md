@@ -43,9 +43,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="7m9426o"><a href="https://imgur.com/7m9426o">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="7m9426o"><a href="https://imgur.com/7m9426o">View post on imgur.com</a></blockquote>
 
-GIF created with [Kap](https://getkap.co/).
+GIF created wi![Kapture 2022-06-17 at 14 14 15](https://user-images.githubusercontent.com/48461874/174403990-293af4c7-383a-45e6-bea5-28d972d7b4e5.gif)
+th [Kap](https://getkap.co/).
 
 ## Notes
 
