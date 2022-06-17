@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 - [ X ] Customize the selection effect of the cell.
 - [ X ] Customize the navigation bar.
 - [ X ] Customize the UI.
-- [ ] Run your app on a real device.
+- [ ] Run your app on a real device (I do not have a Meta iOS Device).
 
 The following **additional** features are implemented:
 
@@ -43,7 +43,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<blockquote class="imgur-embed-pub" lang="en" data-id="7m9426o"><a href="https://imgur.com/7m9426o">View post on imgur.com</a></blockquote>
+
+![Kapture 2022-06-17 at 14 14 15](https://user-images.githubusercontent.com/48461874/174404122-930dd8c8-7eeb-44cb-b362-e4cb625761f9.gif)
+
 
 GIF created with [Kap](https://getkap.co/).
 
