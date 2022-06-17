@@ -51,7 +51,7 @@
 		49E9667A49C74C5B039FB704 /* Pods-Flixter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flixter.release.xcconfig"; path = "Target Support Files/Pods-Flixter/Pods-Flixter.release.xcconfig"; sourceTree = "<group>"; };
 		81717E75B689F679368E7761 /* Pods-FlixterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixterTests.release.xcconfig"; path = "Target Support Files/Pods-FlixterTests/Pods-FlixterTests.release.xcconfig"; sourceTree = "<group>"; };
 		82DF2C0DB19F15B9D08C80DC /* Pods-Flixter-FlixterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flixter-FlixterUITests.release.xcconfig"; path = "Target Support Files/Pods-Flixter-FlixterUITests/Pods-Flixter-FlixterUITests.release.xcconfig"; sourceTree = "<group>"; };
-		848F02FB285A4C8A00403522 /* Flixter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		848F02FB285A4C8A00403522 /* NotNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F02FE285A4C8A00403522 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		848F02FF285A4C8A00403522 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		848F0301285A4C8A00403522 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		848F030D285A4C8A00403522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848F030F285A4C8A00403522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848F0310285A4C8A00403522 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		848F0316285A4C8B00403522 /* FlixterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848F0316285A4C8B00403522 /* NotNetflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotNetflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F031A285A4C8B00403522 /* FlixterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixterTests.m; sourceTree = "<group>"; };
-		848F0320285A4C8B00403522 /* FlixterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848F0320285A4C8B00403522 /* NotNetflixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotNetflixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F0324285A4C8B00403522 /* FlixterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixterUITests.m; sourceTree = "<group>"; };
 		848F0326285A4C8B00403522 /* FlixterUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixterUITestsLaunchTests.m; sourceTree = "<group>"; };
 		848F0333285A534F00403522 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		848F02FC285A4C8A00403522 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				848F02FB285A4C8A00403522 /* Flixter.app */,
-				848F0316285A4C8B00403522 /* FlixterTests.xctest */,
-				848F0320285A4C8B00403522 /* FlixterUITests.xctest */,
+				848F02FB285A4C8A00403522 /* NotNetflix.app */,
+				848F0316285A4C8B00403522 /* NotNetflixTests.xctest */,
+				848F0320285A4C8B00403522 /* NotNetflixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,9 +204,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		848F02FA285A4C8A00403522 /* Flixter */ = {
+		848F02FA285A4C8A00403522 /* NotNetflix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 848F032A285A4C8B00403522 /* Build configuration list for PBXNativeTarget "Flixter" */;
+			buildConfigurationList = 848F032A285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflix" */;
 			buildPhases = (
 				BB7DFC7EC7CC8A8D0C75C1EC /* [CP] Check Pods Manifest.lock */,
 				848F02F7285A4C8A00403522 /* Sources */,
@@ -218,14 +218,14 @@
 			);
 			dependencies = (
 			);
-			name = Flixter;
+			name = NotNetflix;
 			productName = Flixter;
-			productReference = 848F02FB285A4C8A00403522 /* Flixter.app */;
+			productReference = 848F02FB285A4C8A00403522 /* NotNetflix.app */;
 			productType = "com.apple.product-type.application";
 		};
-		848F0315285A4C8B00403522 /* FlixterTests */ = {
+		848F0315285A4C8B00403522 /* NotNetflixTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 848F032D285A4C8B00403522 /* Build configuration list for PBXNativeTarget "FlixterTests" */;
+			buildConfigurationList = 848F032D285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflixTests" */;
 			buildPhases = (
 				0EB7A892A337E8EE6971F6F8 /* [CP] Check Pods Manifest.lock */,
 				848F0312285A4C8B00403522 /* Sources */,
@@ -237,14 +237,14 @@
 			dependencies = (
 				848F0318285A4C8B00403522 /* PBXTargetDependency */,
 			);
-			name = FlixterTests;
+			name = NotNetflixTests;
 			productName = FlixterTests;
-			productReference = 848F0316285A4C8B00403522 /* FlixterTests.xctest */;
+			productReference = 848F0316285A4C8B00403522 /* NotNetflixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		848F031F285A4C8B00403522 /* FlixterUITests */ = {
+		848F031F285A4C8B00403522 /* NotNetflixUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 848F0330285A4C8B00403522 /* Build configuration list for PBXNativeTarget "FlixterUITests" */;
+			buildConfigurationList = 848F0330285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflixUITests" */;
 			buildPhases = (
 				05EFA39C9CE2B0640453AC62 /* [CP] Check Pods Manifest.lock */,
 				848F031C285A4C8B00403522 /* Sources */,
@@ -257,9 +257,9 @@
 			dependencies = (
 				848F0322285A4C8B00403522 /* PBXTargetDependency */,
 			);
-			name = FlixterUITests;
+			name = NotNetflixUITests;
 			productName = FlixterUITests;
-			productReference = 848F0320285A4C8B00403522 /* FlixterUITests.xctest */;
+			productReference = 848F0320285A4C8B00403522 /* NotNetflixUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +284,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 848F02F6285A4C8A00403522 /* Build configuration list for PBXProject "Flixter" */;
+			buildConfigurationList = 848F02F6285A4C8A00403522 /* Build configuration list for PBXProject "NotNetflix" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -297,9 +297,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				848F02FA285A4C8A00403522 /* Flixter */,
-				848F0315285A4C8B00403522 /* FlixterTests */,
-				848F031F285A4C8B00403522 /* FlixterUITests */,
+				848F02FA285A4C8A00403522 /* NotNetflix */,
+				848F0315285A4C8B00403522 /* NotNetflixTests */,
+				848F031F285A4C8B00403522 /* NotNetflixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -473,12 +473,12 @@
 /* Begin PBXTargetDependency section */
 		848F0318285A4C8B00403522 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 848F02FA285A4C8A00403522 /* Flixter */;
+			target = 848F02FA285A4C8A00403522 /* NotNetflix */;
 			targetProxy = 848F0317285A4C8B00403522 /* PBXContainerItemProxy */;
 		};
 		848F0322285A4C8B00403522 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 848F02FA285A4C8A00403522 /* Flixter */;
+			target = 848F02FA285A4C8A00403522 /* NotNetflix */;
 			targetProxy = 848F0321285A4C8B00403522 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -684,7 +684,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flixter.app/Flixter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotNetflix.app/NotNetflix";
 			};
 			name = Debug;
 		};
@@ -703,7 +703,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flixter.app/Flixter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotNetflix.app/NotNetflix";
 			};
 			name = Release;
 		};
@@ -744,7 +744,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		848F02F6285A4C8A00403522 /* Build configuration list for PBXProject "Flixter" */ = {
+		848F02F6285A4C8A00403522 /* Build configuration list for PBXProject "NotNetflix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				848F0328285A4C8B00403522 /* Debug */,
@@ -753,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848F032A285A4C8B00403522 /* Build configuration list for PBXNativeTarget "Flixter" */ = {
+		848F032A285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				848F032B285A4C8B00403522 /* Debug */,
@@ -762,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848F032D285A4C8B00403522 /* Build configuration list for PBXNativeTarget "FlixterTests" */ = {
+		848F032D285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflixTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				848F032E285A4C8B00403522 /* Debug */,
@@ -771,7 +771,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848F0330285A4C8B00403522 /* Build configuration list for PBXNativeTarget "FlixterUITests" */ = {
+		848F0330285A4C8B00403522 /* Build configuration list for PBXNativeTarget "NotNetflixUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				848F0331285A4C8B00403522 /* Debug */,
