@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ticket_tabbar_icon.png",
+      "filename" : "NN25.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ticket_tabbar_icon@2x.png",
+      "filename" : "NN50.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ticket_tabbar_icon@3x.png",
+      "filename" : "NN75.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
