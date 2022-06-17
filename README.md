@@ -8,7 +8,7 @@ Time spent: **~16** hours spent in total
 
 The following **required** functionality is complete:
 
-- [ X ] User sees an app icon on the home screen and a styled launch screen.
+- [X] User sees an app icon on the home screen and a styled launch screen.
 - [ X ] User can view a list of movies currently playing in theaters from The Movie Database.
 - [ X ] Poster images are loaded using the UIImageView category in the AFNetworking library.
 - [ X ] User sees a loading state while waiting for the movies API.
@@ -54,7 +54,7 @@ GIF created with [Kap](https://getkap.co/).
 
 Describe any challenges encountered while building the app.
 
-Creating the random page was really tricky and I also struggled with the network error and search bar features but I figured them out in the end. There are a lot of resources online to explain Objective C and xcode. 
+Creating the random page was really tricky and I also struggled with the network error and search bar features but I figured them out after a bit of researching. There are a lot of resources online to explain Objective C and Xcode and I feel a lot more comfortable with it already. Building it for different devices was also an issue but it seems like we will be learning about that next week.
 
 ## Credits
 
