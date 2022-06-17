@@ -114,7 +114,6 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    self.searchBarView.text = @"";
     [self.searchBarView resignFirstResponder];
 }
 
