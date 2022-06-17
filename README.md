@@ -45,9 +45,9 @@ Here's a walkthrough of implemented user stories:
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="7m9426o"><a href="https://imgur.com/7m9426o">View post on imgur.com</a></blockquote>
 
-[Kapture 2022-06-17 at 14 14 15](https://user-images.githubusercontent.com/48461874/174403990-293af4c7-383a-45e6-bea5-28d972d7b4e5.gif)
+[Kapture 2022-06-17 at 14 14 15](https://user-images.githubusercontent.com/48461874/174403990-293af4c7-383a-45e6-bea5-28d972d7b4e5.gif)!
 
-GIF created wi!th [Kap](https://getkap.co/).
+GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
