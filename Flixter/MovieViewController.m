@@ -68,7 +68,6 @@
                //otherwise we are able to get the information and store it in our dictionaries
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                
-               NSLog(@"%@", dataDictionary);
                // TODO: Get the array of movies
                self.movies = dataDictionary[@"results"];
                self.filteredMovies = self.movies;
@@ -99,13 +98,14 @@
         self.filteredMovies = [self.movies filteredArrayUsingPredicate:predicate];
         
         NSLog(@"%@", self.filteredMovies);
+        [self.tableView reloadData];
         
     }
     else {
         self.filteredMovies = self.movies;
     }
     
-    [self.tableView reloadData];
+    
  
 }
 
@@ -113,8 +113,17 @@
     self.searchBarView.showsCancelButton = YES;
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBarView {
     [self.searchBarView resignFirstResponder];
+    self.searchBarView.text = @"";
+    self.filteredMovies = self.movies;
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBarView
+{
+    [self.searchBarView resignFirstResponder];
+    self.searchBarView.showsCancelButton = YES;
 }
 
 //custom cells and overriding the text in it
@@ -141,7 +150,6 @@
                                         
                                         // imageResponse will be nil if the image is cached
                                         if (imageResponse) {
-                                            NSLog(@"Image was NOT cached, fade in image");
                                             weakSelf.posterImage.alpha = 0.0;
                                             weakSelf.posterImage.image = image;
                                             
@@ -151,7 +159,6 @@
                                             }];
                                         }
                                         else {
-                                            NSLog(@"Image was cached so just update the image");
                                             weakSelf.posterImage.image = image;
                                         }
                                     }
@@ -185,7 +192,7 @@
      //Get the new view controller using [segue destinationViewController].
      //Pass the selected object to the new view controller.
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    NSDictionary *dataToPass = self.movies[indexPath.row];
+    NSDictionary *dataToPass = self.filteredMovies[indexPath.row];
     DetailsViewController *detailVC = [segue destinationViewController];
     detailVC.detailDic = dataToPass;
     

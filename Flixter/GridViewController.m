@@ -12,6 +12,7 @@
 
 @interface GridViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet NSArray *movies;
 @end
 
@@ -36,6 +37,7 @@
     //what we will do with the data (session task)
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            //start animating the loading indicator
+           [self.activityIndicator startAnimating];
            if (error != nil) {
                //if there is an error loading the info
                NSLog(@"%@", [error localizedDescription]);
@@ -58,6 +60,7 @@
                //reload teh data in the table in the table since the internet updates slower than the table
                [self.collectionView reloadData];
                //stop the loading indicators
+               [self.activityIndicator stopAnimating];
            }
        }];
     [task resume];

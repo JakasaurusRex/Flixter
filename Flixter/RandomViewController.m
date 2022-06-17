@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *randomTitle;
 @property (weak, nonatomic) IBOutlet UIButton *randomButton;
 @property (nonatomic, strong) NSArray *movies;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property int r;
 @end
 
@@ -38,6 +39,7 @@
     //what we will do with the data (session task)
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            //start animating the loading indicator
+        [self.activityIndicator startAnimating];
            if (error != nil) {
                //if there is an error loading the info
                NSLog(@"%@", [error localizedDescription]);
@@ -56,7 +58,7 @@
                NSLog(@"%@", dataDictionary);
                // TODO: Get the array of movies
                self.movies = dataDictionary[@"results"];
-               
+               [self.activityIndicator stopAnimating];
            }
        }];
     [task resume];
@@ -65,12 +67,18 @@
 //when button is pressed
 - (IBAction)onTouch {
     double x = 0;
+    self.randomPoster.alpha = 0.0;
+    
+    
     while(x<2) {
         //call the function updateLabel after a time delay which is dependent upon the value of x which is incremented linearly
         [self performSelector:@selector(updateLabel) withObject:nil afterDelay:x];
         [self updateLabel];
         x+=0.2;
     }
+    [UIView animateWithDuration:4 animations:^{
+        self.randomPoster.alpha = 1.0;
+    }];
 }
 
 
@@ -90,6 +98,10 @@ NSLog(@"Random");
     NSURL *posterURl = [NSURL URLWithString:fullPosterURLString];
     
     [self.randomPoster setImageWithURL:posterURl];
+    //Animate UIImageView back to alpha 1 over 0.3sec
+
+    
+    
 }
 
 #pragma mark - Navigation

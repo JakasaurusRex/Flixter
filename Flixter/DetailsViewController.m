@@ -8,6 +8,7 @@
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "YTPlayerView.h"
+#import <Foundation/Foundation.h>
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *widePoster;
@@ -34,7 +35,13 @@
     
     NSString *rating = @"Rating: ";
     NSNumber *voteAvg = self.detailDic[@"vote_average"];
-    NSString *voteAvgString = [voteAvg stringValue];
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    [formatter setMaximumFractionDigits:1];
+
+    NSString *voteAvgString = [formatter stringFromNumber:voteAvg];
+    
     NSString *ratingTextP1 = [rating stringByAppendingString:voteAvgString];
     NSString *ratingTextP2 = [ratingTextP1 stringByAppendingString:@"/10"];
     self.ratingLabel.text = ratingTextP2;
@@ -68,7 +75,7 @@
                                        [UIView animateWithDuration:0.1
                                                         animations:^{
                                                             
-                                                            weakSelf.widePoster.alpha = 1.0;
+                                                            weakSelf.widePoster.alpha = 0.55;
                                                             
                                                         } completion:^(BOOL finished) {
                                                             // The AFNetworking ImageView Category only allows one request to be sent at a time
@@ -92,7 +99,7 @@
                                         
                                         //Animate UIImageView back to alpha 1 over 0.3sec
                                         [UIView animateWithDuration:0.1 animations:^{
-                                            weakSelf.widePoster.alpha = 1.0;
+                                            weakSelf.widePoster.alpha = .55;
                                         }];
                                    }];
     
@@ -124,7 +131,6 @@
            else {
                //otherwise we are able to get the information and store it in our dictionaries
                NSDictionary *vidDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               NSLog(@"%@", vidDictionary);
                
                self.videos = vidDictionary[@"results"];
                
