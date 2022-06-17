@@ -65,7 +65,7 @@
                                        weakSelf.widePoster.alpha = 0.0;
                                        weakSelf.widePoster.image = smallImage;
                                        
-                                       [UIView animateWithDuration:0.3
+                                       [UIView animateWithDuration:0.1
                                                         animations:^{
                                                             
                                                             weakSelf.widePoster.alpha = 1.0;
@@ -91,7 +91,7 @@
                                         weakSelf.widePoster.image = [UIImage imageNamed:@"LuffySad"];
                                         
                                         //Animate UIImageView back to alpha 1 over 0.3sec
-                                        [UIView animateWithDuration:0.3 animations:^{
+                                        [UIView animateWithDuration:0.1 animations:^{
                                             weakSelf.widePoster.alpha = 1.0;
                                         }];
                                    }];
