@@ -43,11 +43,14 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+Good GIF can be found on imgur:
 <blockquote class="imgur-embed-pub" lang="en" data-id="7m9426o"><a href="https://imgur.com/7m9426o">View post on imgur.com</a></blockquote>
 
-
+Small but normal speed
 ![Kapture 2022-06-17 at 14 14 15](https://user-images.githubusercontent.com/48461874/174404122-930dd8c8-7eeb-44cb-b362-e4cb625761f9.gif)
 
+Large but sped up
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/48461874/174412474-8bd24e7c-f6ca-4477-84b9-0c631eff1bb9.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
